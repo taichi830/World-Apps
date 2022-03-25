@@ -16,14 +16,14 @@ struct AppRow: View {
         HStack {
             KFImage(URL(string: result.artworkUrl100))
                 .resizable()
-                .frame(width: 65, height: 65)
+                .frame(width: 63, height: 63)
                 .scaledToFill()
                 .overlay(
                     RoundedRectangle(cornerRadius: 13)
                         .stroke(Color.init(white: 0.95), lineWidth: 1)
                 )
                 .cornerRadius(13)
-            HStack(alignment: .top, spacing: 10) {
+            HStack(alignment: .top, spacing: 13) {
                 Text(row.description).fontWeight(.semibold)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(result.name).font(.system(size: 17)).lineLimit(2)
@@ -31,7 +31,6 @@ struct AppRow: View {
                         .foregroundColor(Color.init(white: 0.6))
                 }
             }
-            
             
             Spacer()
             
