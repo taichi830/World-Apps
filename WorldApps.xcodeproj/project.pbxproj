@@ -128,9 +128,9 @@
 		CE651F6B27E8E27D0080B227 = {
 			isa = PBXGroup;
 			children = (
-				CE651F7627E8E27D0080B227 /* World Apps */,
-				CE651F8727E8E2810080B227 /* World AppsTests */,
-				CE651F9127E8E2810080B227 /* World AppsUITests */,
+				CE651F7627E8E27D0080B227 /* WorldApps */,
+				CE651F8727E8E2810080B227 /* WorldAppsTests */,
+				CE651F9127E8E2810080B227 /* WorldAppsUITests */,
 				CE651F7527E8E27D0080B227 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -145,7 +145,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE651F7627E8E27D0080B227 /* World Apps */ = {
+		CE651F7627E8E27D0080B227 /* WorldApps */ = {
 			isa = PBXGroup;
 			children = (
 				CE3D6DF827E998D800928BE4 /* API */,
@@ -156,7 +156,7 @@
 				CE651F7B27E8E2810080B227 /* Assets.xcassets */,
 				CE651F7D27E8E2810080B227 /* Preview Content */,
 			);
-			path = "World Apps";
+			path = WorldApps;
 			sourceTree = "<group>";
 		};
 		CE651F7D27E8E2810080B227 /* Preview Content */ = {
@@ -167,21 +167,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CE651F8727E8E2810080B227 /* World AppsTests */ = {
+		CE651F8727E8E2810080B227 /* WorldAppsTests */ = {
 			isa = PBXGroup;
 			children = (
 				CE651F8827E8E2810080B227 /* World_AppsTests.swift */,
 			);
-			path = "World AppsTests";
+			path = WorldAppsTests;
 			sourceTree = "<group>";
 		};
-		CE651F9127E8E2810080B227 /* World AppsUITests */ = {
+		CE651F9127E8E2810080B227 /* WorldAppsUITests */ = {
 			isa = PBXGroup;
 			children = (
 				CE651F9227E8E2810080B227 /* World_AppsUITests.swift */,
 				CE651F9427E8E2810080B227 /* World_AppsUITestsLaunchTests.swift */,
 			);
-			path = "World AppsUITests";
+			path = WorldAppsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
