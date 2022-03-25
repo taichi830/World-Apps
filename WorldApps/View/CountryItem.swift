@@ -17,7 +17,6 @@ struct CountryItem: View {
                 .frame(width: 120, height: 80)
                 .overlay(TextOverlay(country: country))
                 .cornerRadius(10)
-            
         }
     }
 }
@@ -43,7 +42,7 @@ struct TextOverlay: View {
 
 struct CountryItem_Previews: PreviewProvider {
     static var previews: some View {
-        CountryItem(country: Country(name: "Korea", imageName: .korea, color: .blue))
+        CountryItem(country: Country(country: .korea, name: "Korea", imageName: .korea, color: .blue))
             .previewLayout(.fixed(width: 200, height: 100))
     }
 }

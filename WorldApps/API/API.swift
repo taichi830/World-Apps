@@ -9,16 +9,16 @@ import Foundation
 import Combine
 import Alamofire
 
+enum CountryID: String {
+    case japan = "jp"
+    case korea = "kr"
+    case usa = "us"
+    case taiwan = "tw"
+    case france = "fr"
+    case spain = "es"
+}
+
 struct API {
-    
-    enum Country: String {
-        case japan = "jp"
-        case korea = "kr"
-        case usa = "us"
-        case taiwan = "tw"
-        case france = "fr"
-        case spain = "es"
-    }
     
     enum Chart: String {
         case free = "top-free"
@@ -37,7 +37,7 @@ struct API {
     
     
     
-    func fetchAppRanking(country: Country, chart: Chart, limit: Limit) -> Future<Apps, Error> {
+    func fetchAppRanking(country: CountryID, chart: Chart, limit: Limit) -> Future<Apps, Error> {
         return Future { promise in
             let country = "/" + country.rawValue
             let chart = "/" + chart.rawValue
