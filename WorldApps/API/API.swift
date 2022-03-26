@@ -18,18 +18,20 @@ enum CountryID: String {
     case spain = "es"
 }
 
+enum Chart: String {
+    case free = "top-free"
+    case paid = "top-paid"
+}
+
+enum Limit: String {
+    case ten = "10"
+    case twentyFive = "25"
+    case fifty = "50"
+}
+
 struct API {
     
-    enum Chart: String {
-        case free = "top-free"
-        case paid = "top-paid"
-    }
     
-    enum Limit: String {
-        case ten = "10"
-        case twentyFive = "25"
-        case fifty = "50"
-    }
     
     static let shared = API()
     

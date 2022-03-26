@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel = AppViewModel()
+    @State var navName = "無料のApp"
     var body: some View {
         ZStack {
             NavigationView {
@@ -25,7 +26,26 @@ struct ContentView: View {
                 .navigationTitle(viewModel.navigationTitle)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Text("無料App").font(.system(size: 17)).foregroundColor(.blue)
+                        Text(navName).foregroundColor(.blue)
+                            .contextMenu {
+                                Button {
+                                    navName = "無料のApp"
+                                    viewModel.chart = .free
+                                    viewModel.tapEvent.send(())
+                                    
+                                } label: {
+                                    Text("無料のApp")
+                                }
+                                
+                                Button {
+                                    navName = "有料のApp"
+                                    viewModel.chart = .paid
+                                    viewModel.tapEvent.send(())
+                                } label: {
+                                    Text("有料のApp")
+                                }
+                                
+                            }
                     }
                 }
             }

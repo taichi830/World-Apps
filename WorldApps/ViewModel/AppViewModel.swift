@@ -15,6 +15,7 @@ class AppViewModel: ObservableObject {
     @Published var results: [Results] = []
     @Published var navigationTitle : String = "Top50: 日本"
     @Published var country: CountryID = .japan
+    @Published var chart: Chart = .free
     
     init() {
         callAPI()
@@ -27,7 +28,7 @@ class AppViewModel: ObservableObject {
     }
     
     private func callAPI() {
-        API.shared.fetchAppRanking(country: country, chart: .free, limit: .fifty)
+        API.shared.fetchAppRanking(country: country, chart: chart, limit: .fifty)
             .sink {
                 print ("completion: \($0)")
             } receiveValue: { [weak self] Apps in
