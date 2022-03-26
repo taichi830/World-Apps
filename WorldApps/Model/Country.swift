@@ -27,12 +27,12 @@ struct Country: Identifiable {
 
 struct CountryData {
     let data = [
-        Country(country: .japan, name: "Japan", imageName: .japan, color: .red),
-        Country(country: .korea, name: "Korea", imageName: .korea, color: .blue),
-        Country(country: .taiwan, name: "Taiwan", imageName: .taiwan, color: .pink),
-        Country(country: .usa, name: "USA", imageName: .usa, color: .green),
-        Country(country: .spain, name: "Spain", imageName: .spain, color: .yellow),
-        Country(country: .france, name: "France", imageName: .france, color: .purple),
+        Country(country: .japan, name: "日本", imageName: .japan, color: .red),
+        Country(country: .korea, name: "韓国", imageName: .korea, color: .blue),
+        Country(country: .taiwan, name: "台湾", imageName: .taiwan, color: .pink),
+        Country(country: .usa, name: "アメリカ", imageName: .usa, color: .green),
+        Country(country: .spain, name: "スペイン", imageName: .spain, color: .yellow),
+        Country(country: .france, name: "フランス", imageName: .france, color: .purple),
     ]
 }
 
