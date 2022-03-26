@@ -10,12 +10,11 @@ import SwiftUI
 @main
 struct World_AppsApp: App {
     init() {
-        let coloredNavAppearance = UINavigationBarAppearance()
-        coloredNavAppearance.configureWithOpaqueBackground()
-        coloredNavAppearance.backgroundColor = .systemBackground
-        coloredNavAppearance.shadowColor = .clear
-        UINavigationBar.appearance().standardAppearance = coloredNavAppearance
-        UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithOpaqueBackground()
+        navigationBarAppearance.shadowColor = .clear
+        UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
     }
     var body: some Scene {
         WindowGroup {
