@@ -15,12 +15,8 @@ struct ContentView: View {
                 List {
                     CountryList(countryData: CountryData(), viewModel: viewModel)
                         .listRowInsets(EdgeInsets())
-                    ForEach(viewModel.AppsData?.feed.results ?? []) { result in
-                        if let index = viewModel.AppsData?.feed.results.firstIndex(where: {
-                            $0.id == result.id
-                        }) {
-                            AppRow(result: result, row: index + 1)
-                        }
+                    ForEach(Array(viewModel.results.enumerated()), id: \.offset) { offset, result in
+                        AppRow(result: result, row: offset + 1)
                     }
                 }
                 .listStyle(.plain)
