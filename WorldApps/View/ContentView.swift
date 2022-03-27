@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var viewModel = AppViewModel()
     @State var navName = "無料のApp"
+//    @State var showingAlert: Bool = true
     var body: some View {
         ZStack {
             NavigationView {
@@ -23,6 +24,9 @@ struct ContentView: View {
                     }
                     .listStyle(.plain)
                 }
+                .alert(isPresented: $viewModel.showingAlert, content: {
+                    Alert(title: Text("エラー"), message: Text("エラーが発生しました"))
+                })
                 .navigationTitle(viewModel.navigationTitle)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {

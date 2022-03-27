@@ -13,6 +13,8 @@ class AppViewModel: ObservableObject {
     var tapEvent = PassthroughSubject<Void,Never>()
     @Published var isLoading: Bool = true
     @Published var results: [Results] = []
+    @Published var showingAlert: Bool = false
+    @Published var error: Error?
     @Published var navigationTitle : String = "Top50: 日本"
     @Published var country: CountryID = .japan
     @Published var chart: Chart = .free
@@ -29,13 +31,27 @@ class AppViewModel: ObservableObject {
     
     private func callAPI() {
         API.shared.fetchAppRanking(country: country, chart: chart, limit: .fifty)
-            .sink {
-                print ("completion: \($0)")
+            .sink { [weak self] completion in
+                switch completion {
+                case .failure(let error):
+                    self?.showingAlert = true
+                    self?.error = error
+                case .finished:
+                    break
+                }
             } receiveValue: { [weak self] Apps in
                 self?.results = Apps.feed.results
                 self?.isLoading = false
             }
             .store(in: &cancellable)
+
+//            .sink {
+//                print ("completion: \($0)")
+//            } receiveValue: { [weak self] Apps in
+//                self?.results = Apps.feed.results
+//                self?.isLoading = false
+//            }
+//            .store(in: &cancellable)
     }
     
 }
