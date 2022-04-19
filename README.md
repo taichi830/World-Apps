@@ -6,4 +6,9 @@
 - アーキテクチャ: MVVM
 - ライブラリ管理: SPM
 ## 使用動画
+https://youtube.com/shorts/gdYSFGqLcbA?feature=share
+
+
+
+
 
